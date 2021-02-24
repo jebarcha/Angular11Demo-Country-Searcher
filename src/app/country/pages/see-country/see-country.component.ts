@@ -24,7 +24,7 @@ export class SeeCountryComponent implements OnInit {
     this.activatedRoute.params
       .pipe(
         switchMap( ( { id }) => this.countryService.getCountryByApha( id ) ),
-        tap( console.log)
+        //tap( console.log)
       )
         .subscribe( country => this.country = country )
 
